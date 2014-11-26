@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Reproducible Pitch Presentation</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Reproducible Pitch Presentation">
+  <meta name="author" content="Prema Kolli">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Reproducible Pitch Presentation</h1>
+    <h2>Developing Data Products</h2>
+    <p>Prema Kolli<br/>Data Scientist</p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>Introduction</h2>
+  </hgroup>
+  <article data-timings="">
+    <p class=''>The application is meant to provide a simple visualization for the Property Hunter Application.
+  . This application is for property investors to calculate the rental yield of a property and estimate the cashflow of owning the property. Your real estate agent and mortgage broker will be able to help you with the numbers.
+  . There are mainly two subset of fields, Property and Costs.
+  . Property has three fields i.e. Address, Price, Weekly Rents
+  . Costs has five fileds i.e. Weekly repayments, Strata, Council, Water, Management Fees</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Slide 2</h2>
+  </hgroup>
+  <article data-timings="">
+    <p class=''>The output is as follows
+    Rental Yield
+      Enter the property&#39;s price and expected weekly rental income to calculate the rental yield.</p>
+
+<pre><code>Cashflow
+  Enter the property&#39;s holding costs to estimate the cashflow of owning the property.
+</code></pre>
+
+<hr>
+
+<h3>Rental Yield</h3>
+
+<p>Enter the property&#39;s price and expected weekly rental income to calculate the rental yield.</p>
+
+<p>Rental Yield is calculated taking weekly rent and property price as input.</p>
+
+<p>The actual implementation involves, weeklyRent * 52 / propertyPrice * 100</p>
+
+<p>And the outcome of the calculation is displayed in the output.</p>
+
+<p>--- .class #id2</p>
+
+<h3>CashFlow</h3>
+
+<pre><code>Cash flow per week and Cash flow per year are displayed as the output.
+
+Cash flow per year and Cash flow per week is calculated taking  weeklyRent, strata, council, water,managementFees and weeklyRepayments as inputs.
+
+The actual implementation for cash flow per year involves weeklyRent * 52 - (strata + council + water) * 4 - managementFees * 52 - weeklyRepayments * 52.
+
+The actual implementation for cash flow per week involves (weeklyRent * 52 - (strata + council + water) * 4 - managementFees * 52 - weeklyRepayments * 52) / 52
+</code></pre>
+
+<p>return(round(result, digits = 2))</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id3" style="background:;">
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='Introduction'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='Slide 2'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title=''>
+         3
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
